@@ -48,4 +48,3 @@ set rtp+=/usr/local/opt/fzf
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 let g:tsuquyomi_completion_detail = 1
-

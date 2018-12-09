@@ -5,6 +5,7 @@ sudo chsh -S /bin/zsh
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/vim ~/.vim
+ln -s $PWD/zshrc ~/.zshrc
 
 git submodule update --init
 vim +PluginInstall +qall

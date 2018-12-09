@@ -1,11 +1,21 @@
 #!/bin/bash
+echo "Install base packages"
 sudo apt install -y zsh build-essential git vim tmux 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sudo chsh -S /bin/zsh
+git config --global user.name "Paul Nunnerley"
+git config --global user.email mail@paulnunnerley.com
+
+echo "Install ZSH and Oh My Zsh"
+rm -Rf ~/.oh-my-zsh 
+git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+
+echo "Link dot files"
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/vim ~/.vim
 ln -s $PWD/zshrc ~/.zshrc
 
+
+echo "Download submodules"
 git submodule update --init
 vim +PluginInstall +qall

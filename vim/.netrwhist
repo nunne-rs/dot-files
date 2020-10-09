@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js'
-let g:netrw_dirhist_2='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js/src'
-let g:netrw_dirhist_3='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js/src/commonutils'
-let g:netrw_dirhist_4='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js'
-let g:netrw_dirhist_5='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js/src'
-let g:netrw_dirhist_6='/Users/paul.nunnerley/AutoTrader/sauron/sauron-common-js/src/commonutils'
-let g:netrw_dirhist_7='/Users/paul.nunnerley/AutoTrader/retailer-tools'
-let g:netrw_dirhist_8='/Users/paul.nunnerley/AutoTrader/retailer-tools/libs/vehicle-check/src/lib/components'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/paul.nunnerley'
+let g:netrw_dirhist_2='/private/var/folders/zx/1f5cc19n7t1b336jcpcyl_580000gp/T'
+let g:netrw_dirhist_3='/Users/paul.nunnerley'
+let g:netrw_dirhist_4='/Users/paul.nunnerley/AutoTrader/ctb/market-insight-service/sql_queries'

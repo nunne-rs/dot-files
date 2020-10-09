@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Install base packages"
-sudo apt install -y zsh build-essential git vim tmux 
+brew install zsh git vim tmux
+yes | xcode-select --install 
 git config --global user.name "Paul Nunnerley"
 git config --global user.email mail@paulnunnerley.com
 

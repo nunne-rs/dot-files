@@ -2,27 +2,46 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
+" FileManagement
 Plug 'scrooloose/nerdtree'
+Plug 'jlanzarotta/bufexplorer'
+
+" Version Control
 Plug 'tpope/vim-fugitive'
+
+" Syntax Plugins
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gabrielelana/vim-markdown'
 Plug 'tfnico/vim-gradle'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'benmills/vimux'
-Plug 'twerth/ir_black'
-Plug 'mileszs/ack.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'whatyouhide/vim-gotham'
-Plug 'tomtom/tcomment_vim'
-Plug 'elixir-editors/vim-elixir'
-Plug 'udalov/kotlin-vim'
-Plug 'nanotech/jellybeans.vim'
 Plug 'derekwyatt/vim-scala'
+Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-sleuth'
+Plug 'editorconfig/editorconfig-vim'
+
+" Searches
+Plug 'mileszs/ack.vim'
+
+" Comments
+Plug 'tomtom/tcomment_vim'
+
+" Pairs
+Plug 'jiangmiao/auto-pairs'
+
+" Colours
+Plug 'nanotech/jellybeans.vim'
+Plug 'twerth/ir_black'
+Plug 'tomasr/molokai'
+Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
 filetype plugin indent on    " required
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 syntax on
-colorscheme jellybeans
+autocmd vimenter * ++nested colorscheme molokai
+set termguicolors
 set number
 set backspace=2
 set noswapfile
@@ -46,8 +65,17 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set hidden
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
 set incsearch
 set hlsearch
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 set ignorecase
 set novisualbell
 set noerrorbells
@@ -92,3 +120,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
+autocmd CursorHold * silent call CocActionAsync('highlight')

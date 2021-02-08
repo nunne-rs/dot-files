@@ -5,7 +5,7 @@ export PATH=/usr/local/bin:$HOME/.jenv/bin:$HOME/bin:$PATH:$HOME/.cargo/bin
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="steeef"
+ZSH_THEME="apple"
 autoload -U promptinit; promptinit
 
 plugins=(nvm) 
@@ -69,12 +69,6 @@ if [ $commands[shippr] ]; then
 fi
 # End of lines added by shippr-cli installer
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/paul.nunnerley/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/paul.nunnerley/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/paul.nunnerley/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/paul.nunnerley/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 alias vim=nvim
 eval "$(zoxide init zsh)"
 
@@ -86,3 +80,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/paul.nunnerley/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/paul.nunnerley/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/paul.nunnerley/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/paul.nunnerley/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
